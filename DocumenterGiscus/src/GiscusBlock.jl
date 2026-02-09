@@ -15,12 +15,13 @@ struct GiscusBlock <: MarkdownAST.AbstractBlock
 end
 
 # 3. 定義 HTML 渲染邏輯
-function domify(dctx::DCtx, node::MarkdownAST.Node, e::GiscusBlock)
+# src/GiscusBlock.jl (在你的插件套件裡)
+
+function HTMLWriter.domify(dctx::DCtx, node::MarkdownAST.Node, e::GiscusBlock)
     @tags div script
-    
     cfg = e.config
     
-    return div[".giscus-container", :style => "margin-top: 3rem; border-top: 1px solid #eaecef; padding-top: 2rem;"](
+    return div[".giscus-container", :style => "margin-top: 50px; border-top: 1px solid #444; padding-top: 20px;"](
         script[
             :src => "https://giscus.app/client.js",
             Symbol("data-repo") => cfg.repo,

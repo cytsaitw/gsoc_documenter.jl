@@ -5,15 +5,14 @@ using DocumenterGiscus # <--- 匯入你剛寫好的套件！
 # 設定 DocMeta
 DocMeta.setdocmeta!(ToyPkg, :DocTestSetup, :(using ToyPkg); recursive=true)
 
-# 1. 準備 Giscus 設定 (填入你的真實 ID)
+# 1. 準備 Giscus 設定
 giscus_config = GiscusConfiguration(
-    "Your account/ToyPkg.jl",
-    "R_kgDOK...",      # Repo ID
-    "Announcements",   # Category Name
-    "DIC_kwDOK...",    # Category ID
+    "cytsaitw/gsoc_documenter.jl", # 儲存庫
+    "1153283606",               # Repo ID
+    "Announcements",              # 分類名稱
+    "DIC_kwDORL22Fs4C2EzL",       # Category ID
     "pathname"
 )
-
 const DOCS_PAGES = [
     "Home"     => "index.md",
     "Tutorial" => "tutorial.md",
