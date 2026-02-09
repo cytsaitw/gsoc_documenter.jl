@@ -1,0 +1,12 @@
+name = "DocumenterGiscus"
+uuid = "fb462765-2f47-4ab5-842b-6dd1cfe449a3"
+version = "0.1.0"
+authors = ["cytsaitw <21618joy@gmail.com>"]
+
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+MarkdownAST = "d0879d2d-cac2-40c8-9cee-1863dc0c7391"
+
+[compat]
+Documenter = "1.16.1"
+MarkdownAST = "0.1.2"

@@ -1,0 +1,4 @@
+name = "ToyPkg"
+uuid = "52d13aa5-3d71-4909-9f4d-8bb6819340dc"
+authors = ["cytsaitw <21618joy@gmail.com>"]
+version = "0.1.0"
