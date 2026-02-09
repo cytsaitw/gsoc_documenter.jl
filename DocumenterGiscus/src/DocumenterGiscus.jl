@@ -3,6 +3,7 @@ module DocumenterGiscus
 using Documenter
 using MarkdownAST
 # 引入必要的 Documenter 內部工具，供 GiscusBlock.jl 使用
+import Documenter.Writers.HTMLWriter as HTMLWriter
 import Documenter.Writers.HTMLWriter: domify, DCtx
 import Documenter.MDFlatten: mdflatten
 using Documenter.DOM: @tags
