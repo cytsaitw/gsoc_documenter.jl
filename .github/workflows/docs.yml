@@ -24,7 +24,7 @@ jobs:
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
-          version: '1.10'
+          version: '1.12'
       
       - name: Cache Julia Dependencies
         uses: julia-actions/cache@v1
@@ -35,9 +35,8 @@ jobs:
           julia --project=. --threads=auto -e "
             import Pkg
             Pkg.instantiate()
-            Pkg.resolve()
             include(\"make.jl\")
-          " 2>&1
+          "
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
