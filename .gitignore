@@ -1,0 +1,17 @@
+# Documenter
+ToyPkg/docs/build/
+
+# Julia artifacts
+/Manifest.toml
+*.jl.*.cov
+*.jl.cov
+*.jl.mem
+/deps/deps.jl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
