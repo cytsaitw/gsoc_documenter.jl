@@ -24,7 +24,7 @@ jobs:
       - name: Setup Julia
         uses: julia-actions/setup-julia@v1
         with:
-          version: '1.9'
+          version: '1.10'
       
       - name: Cache Julia Dependencies
         uses: julia-actions/cache@v1
@@ -32,11 +32,12 @@ jobs:
       - name: Build Documentation
         run: |
           cd ToyPkg/docs
-          julia --project=. -e "
-            using Pkg
+          julia --project=. --threads=auto -e "
+            import Pkg
             Pkg.instantiate()
+            Pkg.resolve()
             include(\"make.jl\")
-          "
+          " 2>&1
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
