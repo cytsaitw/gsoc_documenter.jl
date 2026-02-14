@@ -2,6 +2,9 @@
 
 ```@meta
 CurrentModule = ToyPkg
+DocTestSetup = quote
+    using ToyPkg
+end
 ```
 
 Welcome to**ToyPkg.jl** documentation built with Documenter.
